@@ -1,6 +1,9 @@
 #! /usr/bin/env python
 
-'''Our code to connect to the Riak backend'''
+'''Our code to connect to the MongoDB backend'''
+
+from gevent import monkey
+monkey.patch_all()
 
 import struct
 import pymongo
@@ -28,8 +31,8 @@ class Client(BaseClient):
     '''Our Mongo backend client'''
     def __init__(self, name, num_blocks, num_bits, *args, **kwargs):
         BaseClient.__init__(self, name, num_blocks, num_bits)
-        self.client = pymongo.Connection(*args, **kwargs)
         self.days = kwargs.pop('days', None)
+        self.client = pymongo.Connection(*args, **kwargs)
         self.namePrefix = name + '-'
         if self.days is None:
             self.names = [name]
