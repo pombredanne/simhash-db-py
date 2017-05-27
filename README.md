@@ -6,6 +6,12 @@ to accomplish the same thing. To this end, we were willing to take a slight
 performance hit to avoid having to spend the development time working on a
 more performant solution.
 
+![Status: Production](https://img.shields.io/badge/status-production-green.svg?style=flat)
+![Team: Big Data](https://img.shields.io/badge/team-big_data-green.svg?style=flat)
+![Scope: External](https://img.shields.io/badge/scope-external-green.svg?style=flat)
+![Open Source: Yes](https://img.shields.io/badge/open_source-MIT-green.svg?style=flat)
+![Critical: Yes](https://img.shields.io/badge/critical-yes-red.svg?style=flat)
+
 Backends
 ========
 We tried a few backends, including `cassandra`, `mongodb` and `riak`. Because
